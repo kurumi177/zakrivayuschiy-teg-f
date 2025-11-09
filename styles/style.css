@@ -13,4 +13,119 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-main);
+  font-variation-settings: 'wght' var(--font-weight-regular);
+  background-image: var(--background-gradient);
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.header {
+  width: var(--block-width);
+  margin: 0 auto; 
+  margin-block-start: 100px; 
+}
+
+.logo-group {
+  border: 2px solid var(--color);
+  background-color: var(--background-color);
+  height: 368px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: var(--logo-group-gap); 
+}
+
+.text__tag {
+  font-family: var(--font-accent), var(--font-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--logo-title-primary);
+  text-transform: uppercase;
+  color: var(--color);
+
+}
+
+.close__tag {
+  font-family: var(--font-accent), var(--font-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--logo-title-secondary);
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.cards {
+  width: var(--block-width);
+  border: 2px solid var(--color);
+  margin: 0 auto;
+  margin-block-start: 98px;
+  background-color: var(--background-color);
+  padding-block-end: 37.5px;
+}
+
+.card__title {
+  font-family: var(--font-main);
+  font-size: var(--main-font-size);
+  line-height: var(--card__title_line-height);
+  color: var(--color);
+  font-variation-settings: 'wght' var(--font-weight-bold);
+  padding: 4px 0 4px 10px;
+}
+
+.cards__img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 696px; 
+  height: 696px;
+}
+
+.cards__paragraph {
+  font-family: var(--font-main);
+  font-variation-settings: 'wght' var(--font-weight-regular);
+  font-size: var(--main-font-size);
+  line-height: var(--cards_paragraph_line-height);
+  color: var(--color);
+  margin-block-start: 25px;
+}
+
+.cards__memories {
+  font-family: var(--font-main);
+  font-variation-settings: 'wght' var(--font-weight-regular);
+  font-size: var(--main-font-size);
+  line-height: var(--cards_paragraph_line-height);
+  color: var(--color);
+}
+
+.cards-gap {
+  display: grid;
+  gap: var(--cards-gap);
+  padding-inline: 25px;
+}
+.button__container {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 12px;
+}
+
+.card__like-button{
+  width: 130px;
+  min-height: 38px;
+  border: 2px solid var(--color);
+}
+
+.button__text {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color);
+  text-transform: capitalize
+}
+
+.like-icon {
+  width: 27px;
+  height: 24px;
+  fill: currentColor;
+  flex-shrink: 0; 
 }
