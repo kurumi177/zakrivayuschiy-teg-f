@@ -1,4 +1,3 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --font-main: 'Inter', sans-serif;
   --font-accent: 'PressStart2P', fantasy;
@@ -34,4 +33,6 @@
   --cards-gap: 25px;
   --stroke-color: #FFFFFF;
   --padding-header: clamp(6.78rem, 5.5rem + 1.91vw, 7.23rem);
+  --contour-color: var(--color);
+  --animation-fill-color: #FF0000;
 }
