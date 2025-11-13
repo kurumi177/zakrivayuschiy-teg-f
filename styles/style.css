@@ -142,10 +142,6 @@
   background-color: transparent;
 }
 
-.like-icon {
-  width: 39px;
-  height: 36px;
-}
 
 .button__text {
   font-family: var(--font-accent);
@@ -393,6 +389,8 @@ body:has(.dialog[open]) {
 .like-icon {
   transform-origin: center;
   cursor: pointer;
+  width: 39px;
+  height: 36px;
 }
 
 .like-icon .sparks {
