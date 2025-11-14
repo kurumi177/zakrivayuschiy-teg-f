@@ -359,7 +359,6 @@ body:has(.dialog[open]) {
 .like-icon {
   transform-origin: center;
   cursor: pointer;
-  transform-origin: center;
   flex-shrink: 0;
 }
 
