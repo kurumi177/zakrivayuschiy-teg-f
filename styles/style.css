@@ -18,10 +18,12 @@
   background-image: var(--background-gradient);
   background-attachment: fixed;
   background-size: cover;
+  width: 100%;
 }
 
 .header {
-  width: var(--block-width);
+  width: 100%;
+  max-width: var(--block-width);
   margin: 0 auto;
   margin-block-start: 100px;
 }
@@ -57,7 +59,8 @@
 }
 
 .cards {
-  width: var(--block-width);
+  width: 100%;
+  max-width: var(--block-width);
   border: 2px solid var(--color);
   margin: 0 auto;
   background-color: var(--background-color);
@@ -68,6 +71,7 @@
   flex-direction: column;
   gap: 50px;
   margin-block-start: 98px;
+  width: 100%;
 }
 
 .card__header {
@@ -116,6 +120,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
+  gap: 12px;
 }
 
 .card__icon-button {
@@ -125,11 +130,8 @@
   align-items: center;
   justify-content: center;
   transition: border-color 0.3s ease;
-}
-
-.card__icon-button:focus-visible {
-  outline: none;
-  border-color: var(--color);
+  width: 39px;
+  height: 38px;
 }
 
 .card__like-button {
@@ -141,7 +143,6 @@
   align-items: center;
   background-color: transparent;
 }
-
 
 .button__text {
   font-family: var(--font-accent);
@@ -187,13 +188,12 @@
   }
 }
 
-.footer {
+.save-button-container {
   display: flex;
   justify-content: center;
   margin-block-start: 50px;
   margin-block-end: 100px;
 }
-
 .footer-button {
   display: flex;
   align-items: center;
@@ -269,48 +269,39 @@ body:has(.dialog[open]) {
   margin-block-start: 30px;
 }
 
-.cards__zero .cards__img {
+.filter-sepia {
   filter: sepia(0.8);
 }
 
-.cards__clean_sheet .cards__img {
+.filter-blur {
   filter: blur(2px);
 }
 
-.cards__fail .cards__img {
+.filter-grayscale {
   filter: grayscale(0.7);
 }
 
-.cards__ideal .cards__img {
+.filter-saturate {
   filter: saturate(2);
 }
 
-.cards__nearby .cards__img {
+.filter-contrast {
   filter: contrast(1.8);
 }
 
-.cards__strategies .cards__img {
+.filter-invert {
   filter: invert(0.9);
 }
 
-.cards__hands .cards__img {
+.filter-hue-rotate {
   filter: hue-rotate(45deg);
 }
 
-.cards__current .cards__img {
+.filter-mixed {
   filter: saturate(2) contrast(1.2) hue-rotate(45deg);
 }
 
-.card__like-button:focus,
-.footer-button:focus,
-.ok_button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--color);
-}
-
-.card__like-button,
-.footer-button,
-.ok_button {
+.button {
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
@@ -318,9 +309,12 @@ body:has(.dialog[open]) {
   background-color: var(--background-color);
 }
 
-.card__like-button::before,
-.footer-button::before,
-.ok_button::before {
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--color);
+}
+
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -333,15 +327,11 @@ body:has(.dialog[open]) {
   transition: transform 0.5s ease-in-out;
 }
 
-.card__like-button:hover::before,
-.footer-button:hover::before,
-.ok_button:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
-.card__like-button .button__text,
-.footer-button .button__text,
-.ok_button .button__text {
+.button .button__text {
   position: relative;
   z-index: 2;
   color: var(--background-color);
@@ -369,8 +359,15 @@ body:has(.dialog[open]) {
 .like-icon {
   transform-origin: center;
   cursor: pointer;
+  transform-origin: center;
+  flex-shrink: 0;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: var(--color);
   width: 39px;
-  height: 36px;
+  height: 38px;
 }
 
 @media (width <= 375px) {
